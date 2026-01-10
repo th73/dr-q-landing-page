@@ -261,6 +261,23 @@ h1 {
     }
 }
 
+@media (max-width: 768px) {
+    .floating-1 {
+        right: 0;
+        top: 5%;
+        transform: scale(0.85);
+    }
+
+    .floating-2 {
+        left: 0;
+        bottom: 5%;
+        transform: scale(0.85);
+    }
+
+    /* Reset animation transforms so they don't conflict, 
+       or simply keep the animation but ensure base position is safe */
+}
+
 .stat-number {
     font-size: 1.5rem;
     font-weight: 800;
