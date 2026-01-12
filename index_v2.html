@@ -16,23 +16,24 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- "Texas Modern" Functional Palette Config -->
+    <!-- "Texas Modern" Authority Palette Config (Migrated from V1) -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        // The "Action" Trio (10%)
-                        'drq-red': '#d71735',       // Urgency / Stop Pain / Primary CTA
-                        'drq-green': '#4aa842',     // Growth / Stability / Results
-                        'drq-green-light': '#8cc73d', // Energy / Highlights / Accents
+                        // The Major Keys (From index.html)
+                        'drq-blue': '#2563EB',       // Primary / Action / Trust (Was Red)
+                        'drq-blue-dark': '#1E40AF',  // Hover / Deep Action
+                        'drq-gold': '#F59E0B',       // Accent / Success / Highlights (Was Green)
+                        'drq-gold-light': '#FBBF24', // Glow / Brightness (Was Green-Light)
 
-                        // The "Authority" Foundation (30%)
-                        'drq-grey': '#4c4c4c',      // Headlines / Hero BG / Footer (Replaces Black)
+                        // The "Authority" Foundation
+                        'drq-navy': '#0F172A',      // Headlines / Hero BG / Footer (Was Grey)
 
-                        // The "Breathing Room" (60%)
-                        'drq-grey-light': '#c4c4c4', // Borders / Neutral Backgrounds
-                        'drq-bg': '#F9FAFB',        // Very light grey for general page background
+                        // The "Breathing Room"
+                        'drq-slate': '#64748B',     // Text / Borders (Was Grey-Light)
+                        'drq-bg': '#F8FAFC',        // Light Background (V1 --light)
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -57,56 +58,56 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #c4c4c4;
+            background: #64748B;
             border-radius: 4px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #4c4c4c;
+            background: #0F172A;
         }
     </style>
 </head>
 
-<body class="font-sans text-drq-grey antialiased bg-white pb-20 md:pb-0">
+<body class="font-sans text-drq-navy antialiased bg-white pb-20 md:pb-0">
 
     <!-- STICKY REGISTRATION BAR -->
-    <!-- Functional Color: Red for urgency/scarcity -->
+    <!-- Authority Color: Navy for authority, Blue for Action -->
     <div
-        class="fixed bottom-0 md:top-0 md:bottom-auto left-0 w-full bg-drq-grey text-white z-50 border-t md:border-b border-drq-red shadow-md">
+        class="fixed bottom-0 md:top-0 md:bottom-auto left-0 w-full bg-drq-navy text-white z-50 border-t md:border-b border-drq-blue shadow-md">
         <div class="max-w-6xl mx-auto px-4 py-3 md:py-2 flex items-center justify-between">
             <div class="flex items-center gap-2">
-                <!-- Red Pulse for "Stop/Look" -->
-                <span class="inline-block w-2.5 h-2.5 rounded-full bg-drq-red animate-pulse"></span>
+                <!-- Blue Pulse for "Action" -->
+                <span class="inline-block w-2.5 h-2.5 rounded-full bg-drq-blue animate-pulse"></span>
                 <span class="font-semibold text-sm md:text-base tracking-wide text-white">Only 16 Seats Left</span>
             </div>
-            <!-- Primary CTA: Red = Action -->
+            <!-- Primary CTA: Blue = Action -->
             <a href="#pricing"
-                class="bg-drq-red hover:bg-red-700 text-white text-xs md:text-sm font-bold uppercase tracking-wider py-2 px-6 rounded shadow-lg transition-transform transform active:scale-95 border-b-2 border-drq-green">
+                class="bg-drq-blue hover:bg-drq-blue-dark text-white text-xs md:text-sm font-bold uppercase tracking-wider py-2 px-6 rounded shadow-lg transition-transform transform active:scale-95 border-b-2 border-drq-gold">
                 Secure Your Spot
             </a>
         </div>
     </div>
 
     <!-- NAV (Authority/Clean) -->
-    <nav class="md:mt-12 bg-white/90 backdrop-blur-md border-b border-drq-grey-light/30">
+    <nav class="md:mt-12 bg-white/90 backdrop-blur-md border-b border-drq-slate/30">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-serif font-bold text-xl md:text-2xl text-drq-grey tracking-tight">
-                Dr. Q <span class="text-drq-green">Consulting</span>
+            <div class="font-serif font-bold text-xl md:text-2xl text-drq-navy tracking-tight">
+                Dr. Q <span class="text-drq-gold">Consulting</span>
             </div>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-drq-grey/80">
-                <a href="#problem" class="hover:text-drq-red transition">The Problem</a>
-                <a href="#solution" class="hover:text-drq-green transition">The Solution</a>
-                <a href="#pricing" class="hover:text-drq-grey transition font-bold">Pricing</a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-drq-navy/80">
+                <a href="#problem" class="hover:text-drq-blue transition">The Problem</a>
+                <a href="#solution" class="hover:text-drq-gold transition">The Solution</a>
+                <a href="#pricing" class="hover:text-drq-navy transition font-bold">Pricing</a>
             </div>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <!-- Background: Dark Grey Authority. Text: White. CTA: Red. -->
-    <header class="relative bg-drq-grey overflow-hidden">
+    <!-- Background: Navy Authority. Text: White. CTA: Blue. -->
+    <header class="relative bg-drq-navy overflow-hidden">
         <!-- Abstract Background Shape -->
         <div class="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-black/20 to-transparent"></div>
-        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-drq-green/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-drq-gold/10 rounded-full blur-3xl"></div>
 
         <div class="relative max-w-6xl mx-auto px-6 pt-16 pb-20 md:py-24 grid md:grid-cols-2 gap-12 items-center">
 
@@ -115,31 +116,31 @@
                 <!-- Trust Signal -->
                 <div
                     class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 backdrop-blur-sm">
-                    <span class="text-drq-green-light text-sm">★★★★★</span>
+                    <span class="text-drq-gold-light text-sm">★★★★★</span>
                     <span class="text-slate-200 text-xs font-medium tracking-wide section-tag">TRUSTED BY 160+ TEXAS
                         TEACHERS</span>
                 </div>
 
                 <h1 class="font-serif font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
-                    It’s Not Supposed To Be <span class="text-drq-green-light italic">This Hard</span>.
+                    It’s Not Supposed To Be <span class="text-drq-gold-light italic">This Hard</span>.
                 </h1>
 
                 <p class="text-lg md:text-xl text-slate-300 leading-relaxed max-w-lg mx-auto md:mx-0">
                     Reclaim your sanity. Spend 2 days with Dr. Q to master Tier 1 instruction, eliminate behavior drama,
-                    and knock out your <strong class="text-white border-b-2 border-drq-green">12 mandated CPE
+                    and knock out your <strong class="text-white border-b-2 border-drq-gold">12 mandated CPE
                         hours</strong>.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
-                    <!-- Major CTA: Red (Urgent) -->
+                    <!-- Major CTA: Blue (Action) -->
                     <a href="#pricing"
-                        class="relative group bg-drq-red hover:bg-red-700 text-white text-lg font-bold py-4 px-8 rounded-lg shadow-2xl shadow-drq-red/20 transition-all hover:-translate-y-1">
+                        class="relative group bg-drq-blue hover:bg-drq-blue-dark text-white text-lg font-bold py-4 px-8 rounded-lg shadow-2xl shadow-drq-blue/20 transition-all hover:-translate-y-1">
                         <span class="absolute inset-0 w-full h-full bg-white/20 rounded-lg animate-pulse-slow"></span>
                         <span class="relative">Start Winning Today</span>
                     </a>
 
                     <a href="#reviews"
-                        class="inline-flex items-center justify-center gap-2 text-slate-300 hover:text-white font-medium transition py-4 px-6 border border-white/20 rounded-lg hover:border-drq-green-light hover:text-drq-green-light">
+                        class="inline-flex items-center justify-center gap-2 text-slate-300 hover:text-white font-medium transition py-4 px-6 border border-white/20 rounded-lg hover:border-drq-gold-light hover:text-drq-gold-light">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
@@ -154,14 +155,14 @@
                 <div
                     class="pt-6 flex items-center justify-center md:justify-start gap-6 text-slate-400 text-xs md:text-sm font-medium">
                     <div class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-drq-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 text-drq-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                         30-Year Veteran
                     </div>
                     <div class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-drq-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 text-drq-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
                             </path>
@@ -173,24 +174,24 @@
 
             <!-- Hero Visual -->
             <div class="hidden md:block relative">
-                <!-- Green Accent Border -->
-                <div class="absolute inset-0 bg-drq-green rounded-2xl transform rotate-3 opacity-30"></div>
+                <!-- Gold Accent Border -->
+                <div class="absolute inset-0 bg-drq-gold rounded-2xl transform rotate-3 opacity-30"></div>
                 <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
                     alt="Confident Teacher"
                     class="relative rounded-2xl shadow-2xl border-4 border-white w-full object-cover h-[500px]">
 
                 <!-- Floating Stat Card -->
-                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-xl border-l-4 border-drq-green flex items-center gap-4 animate-bounce"
+                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-xl border-l-4 border-drq-gold flex items-center gap-4 animate-bounce"
                     style="animation-duration: 3s;">
-                    <div class="bg-green-50 p-2 rounded-full">
-                        <svg class="w-6 h-6 text-drq-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="bg-amber-50 p-2 rounded-full">
+                        <svg class="w-6 h-6 text-drq-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
                     <div>
-                        <div class="text-xs text-drq-grey-light uppercase font-bold">Time Saved</div>
-                        <div class="text-drq-grey font-bold">100+ Hours/Year</div>
+                        <div class="text-xs text-drq-slate uppercase font-bold">Time Saved</div>
+                        <div class="text-drq-navy font-bold">100+ Hours/Year</div>
                     </div>
                 </div>
             </div>
@@ -198,41 +199,41 @@
     </header>
 
     <!-- PROBLEM SECTION (The Agitation) -->
-    <!-- Red for Pain (Warnings) -->
+    <!-- Blue for Emphasis -->
     <section id="problem" class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="font-serif font-bold text-3xl md:text-4xl text-drq-grey mb-4">Is This Your Reality?</h2>
-            <p class="text-drq-grey/80 text-lg mb-12">You aren't a bad teacher. You just need a better system.</p>
+            <h2 class="font-serif font-bold text-3xl md:text-4xl text-drq-navy mb-4">Is This Your Reality?</h2>
+            <p class="text-drq-navy/80 text-lg mb-12">You aren't a bad teacher. You just need a better system.</p>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Friction Card 1 -->
                 <div
-                    class="p-6 bg-drq-bg rounded-xl border border-drq-grey-light/30 hover:border-drq-red/50 hover:shadow-lg transition group">
-                    <!-- Red Warning Icon -->
-                    <div class="text-4xl mb-4 text-drq-red group-hover:scale-110 transition-transform duration-300">📢
+                    class="p-6 bg-drq-bg rounded-xl border border-drq-slate/30 hover:border-drq-blue/50 hover:shadow-lg transition group">
+                    <!-- Blue Icon -->
+                    <div class="text-4xl mb-4 text-drq-blue group-hover:scale-110 transition-transform duration-300">📢
                     </div>
-                    <h3 class="font-bold text-drq-grey mb-2">Directions Ignored</h3>
-                    <p class="text-sm text-drq-grey/70">You repeat yourself 5 times. They still look at you like you're
+                    <h3 class="font-bold text-drq-navy mb-2">Directions Ignored</h3>
+                    <p class="text-sm text-drq-navy/70">You repeat yourself 5 times. They still look at you like you're
                         speaking Latin.</p>
                 </div>
 
                 <!-- Friction Card 2 -->
                 <div
-                    class="p-6 bg-drq-bg rounded-xl border border-drq-grey-light/30 hover:border-drq-red/50 hover:shadow-lg transition group">
-                    <div class="text-4xl mb-4 text-drq-red group-hover:scale-110 transition-transform duration-300">🌪️
+                    class="p-6 bg-drq-bg rounded-xl border border-drq-slate/30 hover:border-drq-blue/50 hover:shadow-lg transition group">
+                    <div class="text-4xl mb-4 text-drq-blue group-hover:scale-110 transition-transform duration-300">🌪️
                     </div>
-                    <h3 class="font-bold text-drq-grey mb-2">Chaotic Transitions</h3>
-                    <p class="text-sm text-drq-grey/70">Moving from desks to the carpet takes 10 minutes and
+                    <h3 class="font-bold text-drq-navy mb-2">Chaotic Transitions</h3>
+                    <p class="text-sm text-drq-navy/70">Moving from desks to the carpet takes 10 minutes and
                         high-blood-pressure energy.</p>
                 </div>
 
                 <!-- Friction Card 3 -->
                 <div
-                    class="p-6 bg-drq-bg rounded-xl border border-drq-grey-light/30 hover:border-drq-red/50 hover:shadow-lg transition group">
-                    <div class="text-4xl mb-4 text-drq-red group-hover:scale-110 transition-transform duration-300">📅
+                    class="p-6 bg-drq-bg rounded-xl border border-drq-slate/30 hover:border-drq-blue/50 hover:shadow-lg transition group">
+                    <div class="text-4xl mb-4 text-drq-blue group-hover:scale-110 transition-transform duration-300">📅
                     </div>
-                    <h3 class="font-bold text-drq-grey mb-2">Already Done</h3>
-                    <p class="text-sm text-drq-grey/70">It's only Tuesday and you are already counting the days until
+                    <h3 class="font-bold text-drq-navy mb-2">Already Done</h3>
+                    <p class="text-sm text-drq-navy/70">It's only Tuesday and you are already counting the days until
                         Spring Break.</p>
                 </div>
             </div>
@@ -240,63 +241,87 @@
     </section>
 
     <!-- COMPARISON GRID -->
-    <!-- Functional Color: Grey (Boring) vs Green (Success) -->
-    <section class="py-20 bg-drq-grey-light/10">
+    <!-- Functional Color: Slate (Boring) vs Gold (Success) -->
+    <section class="py-20 bg-drq-slate/10">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-16">
-                <span class="text-drq-red font-bold uppercase tracking-widest text-sm">The Difference</span>
-                <h2 class="font-serif font-bold text-3xl md:text-4xl mt-2 text-drq-grey">Stop Wasting Your PD Days</h2>
+                <span class="text-drq-blue font-bold uppercase tracking-widest text-sm">The Difference</span>
+                <h2 class="font-serif font-bold text-3xl md:text-4xl mt-2 text-drq-navy">Stop Wasting Your PD Days</h2>
             </div>
 
             <div class="grid md:grid-cols-2 rounded-2xl overflow-hidden shadow-2xl">
-                <!-- Standard PD (Boring Grey) -->
-                <div class="bg-drq-grey-light/20 p-10 md:p-12 border-r border-white relative">
+                <!-- Standard PD (Boring Slate) -->
+                <div class="bg-drq-slate/20 p-10 md:p-12 border-r border-white relative">
                     <div
-                        class="absolute top-4 right-4 text-xs text-drq-grey font-bold uppercase border border-drq-grey/20 px-2 py-1 rounded bg-white/50">
+                        class="absolute top-4 right-4 text-xs text-drq-navy font-bold uppercase border border-drq-navy/20 px-2 py-1 rounded bg-white/50">
                         The Old Way</div>
-                    <h3 class="font-bold text-2xl text-drq-grey/60 mb-8 flex items-center gap-3">
+                    <h3 class="font-bold text-2xl text-drq-navy/60 mb-8 flex items-center gap-3">
                         <svg class="w-6 h-6 grayscale opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                         Standard District PD
                     </h3>
-                    <ul class="space-y-6 text-drq-grey/60">
+                    <ul class="space-y-6 text-drq-navy/60">
                         <li class="flex items-start gap-3">
-                            <span class="text-drq-red mt-1">❌</span>
+                            <svg class="w-5 h-5 text-drq-navy mt-1 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
                             <span>"Death by PowerPoint" lectures that put you to sleep.</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-drq-red mt-1">❌</span>
+                            <svg class="w-5 h-5 text-drq-navy mt-1 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
                             <span>Theoretical fluff by people who haven't taught since 1998.</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-drq-red mt-1">❌</span>
+                            <svg class="w-5 h-5 text-drq-navy mt-1 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
                             <span>Zero retention compared to our active modeling.</span>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Win The Classroom (Success Green) -->
-                <div class="bg-white p-10 md:p-12 relative overflow-hidden border-t-8 border-drq-green">
-                    <h3 class="font-bold text-2xl text-drq-grey mb-8 flex items-center gap-3">
-                        <svg class="w-6 h-6 text-drq-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <!-- Win The Classroom (Success Gold) -->
+                <div class="bg-white p-10 md:p-12 relative overflow-hidden border-t-8 border-drq-gold">
+                    <h3 class="font-bold text-2xl text-drq-navy mb-8 flex items-center gap-3">
+                        <svg class="w-6 h-6 text-drq-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
-                        <span class="text-drq-green font-black">Win the Classroom</span>
+                        <span class="text-drq-gold font-black">Win the Classroom</span>
                     </h3>
-                    <ul class="space-y-6 text-drq-grey font-medium">
+                    <ul class="space-y-6 text-drq-navy font-medium">
                         <li class="flex items-start gap-3">
-                            <span class="text-drq-green mt-1 text-xl">✅</span>
+                            <svg class="w-6 h-6 text-drq-gold mt-1 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
                             <span>Live modeling & "Teach Like a Champion" drills.</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-drq-green mt-1 text-xl">✅</span>
+                            <svg class="w-6 h-6 text-drq-gold mt-1 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
                             <span>Instant, actionable tools you can use tomorrow.</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-drq-green mt-1 text-xl">✅</span>
+                            <svg class="w-6 h-6 text-drq-gold mt-1 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
                             <span>High-energy, joy-filled atmosphere. Actual fun.</span>
                         </li>
                     </ul>
@@ -308,24 +333,24 @@
     <!-- ROADMAP SECTION -->
     <section class="py-20 bg-white" id="solution">
         <div class="max-w-4xl mx-auto px-6">
-            <h2 class="font-serif font-bold text-3xl md:text-4xl text-center text-drq-grey mb-12">The 2-Day Intensive
+            <h2 class="font-serif font-bold text-3xl md:text-4xl text-center text-drq-navy mb-12">The 2-Day Intensive
                 Roadmap</h2>
 
             <div
-                class="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-drq-grey-light before:to-transparent">
+                class="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-drq-slate before:to-transparent">
 
                 <!-- Day 1 -->
                 <div
                     class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                     <div
-                        class="flex items-center justify-center w-10 h-10 rounded-full border border-drq-grey-light bg-white text-drq-grey shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                        class="flex items-center justify-center w-10 h-10 rounded-full border border-drq-slate bg-white text-drq-navy shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
                         1
                     </div>
                     <div
-                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl border border-drq-grey-light/40 shadow-sm transition hover:border-drq-green/50">
-                        <div class="text-drq-grey-light font-bold uppercase text-xs mb-1">Day One</div>
-                        <h3 class="font-bold text-drq-grey text-lg mb-2">The Blueprint</h3>
-                        <p class="text-drq-grey/70 text-sm">Mastering the "Fundamental Five" and the "Look-Fors." We
+                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl border border-drq-slate/40 shadow-sm transition hover:border-drq-gold/50">
+                        <div class="text-drq-slate font-bold uppercase text-xs mb-1">Day One</div>
+                        <h3 class="font-bold text-drq-navy text-lg mb-2">The Blueprint</h3>
+                        <p class="text-drq-navy/70 text-sm">Mastering the "Fundamental Five" and the "Look-Fors." We
                             strip down your classroom management to the studs.</p>
                     </div>
                 </div>
@@ -333,16 +358,16 @@
                 <!-- Day 2 -->
                 <div
                     class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                    <!-- Green for Success/Completion -->
+                    <!-- Gold for Success/Completion -->
                     <div
-                        class="flex items-center justify-center w-10 h-10 rounded-full border border-drq-green bg-drq-green text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                        class="flex items-center justify-center w-10 h-10 rounded-full border border-drq-gold bg-drq-gold text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
                         2
                     </div>
                     <div
-                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl border-l-4 border-drq-green shadow-md">
-                        <div class="text-drq-green font-bold uppercase text-xs mb-1">Day Two</div>
-                        <h3 class="font-bold text-drq-grey text-lg mb-2">The Execution</h3>
-                        <p class="text-drq-grey/70 text-sm">Live practice. You will stand up and rehearse. We create
+                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl border-l-4 border-drq-gold shadow-md">
+                        <div class="text-drq-gold font-bold uppercase text-xs mb-1">Day Two</div>
+                        <h3 class="font-bold text-drq-navy text-lg mb-2">The Execution</h3>
+                        <p class="text-drq-navy/70 text-sm">Live practice. You will stand up and rehearse. We create
                             your Monday Morning Action Plan.</p>
                     </div>
                 </div>
@@ -355,9 +380,9 @@
     <section id="pricing" class="py-24 bg-drq-bg">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="font-serif font-bold text-4xl text-drq-grey mb-4">Simple Pricing. <span
-                        class="bg-drq-green-light/20 text-drq-green font-black px-2">Insane Value.</span></h2>
-                <p class="text-drq-grey/70">Most teachers bring a friend. Smart teachers bring two.</p>
+                <h2 class="font-serif font-bold text-4xl text-drq-navy mb-4">Simple Pricing. <span
+                        class="bg-drq-gold-light/20 text-drq-gold font-black px-2">Insane Value.</span></h2>
+                <p class="text-drq-navy/70">Most teachers bring a friend. Smart teachers bring two.</p>
             </div>
 
             <!-- Pricing Switcher -->
@@ -365,29 +390,50 @@
 
                 <!-- Solo Ticket -->
                 <div
-                    class="w-full md:w-1/3 p-8 border border-drq-grey-light/50 rounded-2xl hover:border-drq-grey-light transition bg-white">
-                    <h3 class="font-bold text-xl text-drq-grey">Solo Teacher</h3>
+                    class="w-full md:w-1/3 p-8 border border-drq-slate/50 rounded-2xl hover:border-drq-slate transition bg-white">
+                    <h3 class="font-bold text-xl text-drq-navy">Solo Teacher</h3>
                     <div class="my-4">
-                        <span class="text-4xl font-bold text-drq-grey">$449</span>
-                        <span class="text-drq-grey-light text-sm">/person</span>
+                        <span class="text-4xl font-bold text-drq-navy">$449</span>
+                        <span class="text-drq-slate text-sm">/person</span>
                     </div>
-                    <ul class="space-y-3 mb-8 text-drq-grey/80 text-sm">
-                        <li class="flex gap-2"><span class="text-drq-green">✔️</span> 12 PD Hours</li>
-                        <li class="flex gap-2"><span class="text-drq-green">✔️</span> Course Workbook</li>
-                        <li class="flex gap-2"><span class="text-drq-green">✔️</span> Lunch Included</li>
+                    <ul class="space-y-3 mb-8 text-drq-navy/80 text-sm">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-drq-gold shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            12 PD Hours
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-drq-gold shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Course Workbook
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-drq-gold shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Lunch Included
+                        </li>
                     </ul>
                     <a href="#"
-                        class="block w-full py-3 px-6 border-2 border-drq-grey text-drq-grey font-bold text-center rounded-lg hover:bg-drq-grey hover:text-white transition">Register
+                        class="block w-full py-3 px-6 border-2 border-drq-navy text-drq-navy font-bold text-center rounded-lg hover:bg-drq-navy hover:text-white transition">Register
                         Solo</a>
                 </div>
 
                 <!-- The "Power of 3" Featured Card -->
-                <!-- Dark Grey Background for Authority -->
+                <!-- Navy Background for Authority -->
                 <div
-                    class="w-full md:w-1/2 relative bg-drq-grey text-white rounded-2xl shadow-2xl p-8 md:p-10 transform md:-translate-y-4 border-2 border-drq-green">
-                    <!-- Sash: Red for "Hot Deal" -->
+                    class="w-full md:w-1/2 relative bg-drq-navy text-white rounded-2xl shadow-2xl p-8 md:p-10 transform md:-translate-y-4 border-2 border-drq-gold">
+                    <!-- Sash: Blue for "Hot Deal" -->
                     <div
-                        class="absolute top-0 right-0 bg-drq-red text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg shadow-sm">
+                        class="absolute top-0 right-0 bg-drq-blue text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg shadow-sm">
                         MOST POPULAR
                     </div>
 
@@ -403,7 +449,7 @@
                                     class="p-2 w-8 h-8 flex items-center justify-center rounded bg-white/10 hover:bg-white/20 transition text-sm">2</button>
                                 <!-- Green Button for the Target Selection -->
                                 <button onclick="setTeamSize(3)" id="btn-3"
-                                    class="p-2 w-8 h-8 flex items-center justify-center rounded bg-drq-green text-white font-bold shadow-lg scale-110 transition text-sm">3</button>
+                                    class="p-2 w-8 h-8 flex items-center justify-center rounded bg-drq-gold text-white font-bold shadow-lg scale-110 transition text-sm">3</button>
                                 <button onclick="setTeamSize(5)" id="btn-5"
                                     class="p-2 w-8 h-8 flex items-center justify-center rounded bg-white/10 hover:bg-white/20 transition text-sm">5</button>
                             </div>
@@ -411,16 +457,16 @@
 
                         <!-- Dynamic Price Display -->
                         <div class="text-center py-4 border-t border-white/10">
-                            <div class="text-xs text-drq-green-light uppercase font-bold tracking-wider mb-1 animate-pulse"
+                            <div class="text-xs text-drq-gold-light uppercase font-bold tracking-wider mb-1 animate-pulse"
                                 id="deal-text">🔥 3RD PERSON FOR $1!</div>
                             <div class="text-5xl font-bold text-white mb-1" id="total-price">$899</div>
                             <div class="text-sm text-slate-400">Total for <span id="person-count">3</span> People</div>
                         </div>
                     </div>
 
-                    <!-- CTA: Red for ACTION -->
+                    <!-- CTA: Blue for ACTION -->
                     <a href="#"
-                        class="block w-full py-4 px-6 bg-drq-red hover:bg-red-700 text-white font-bold text-center rounded-lg shadow-lg transition transform hover:-translate-y-1 border-b-2 border-drq-green">
+                        class="block w-full py-4 px-6 bg-drq-blue hover:bg-drq-blue-dark text-white font-bold text-center rounded-lg shadow-lg transition transform hover:-translate-y-1 border-b-2 border-drq-gold">
                         Claim 3 Seats Now
                     </a>
                     <p class="text-center text-xs text-slate-400 mt-4">100% Money-Back Guarantee applied to all tickets.
@@ -431,39 +477,39 @@
     </section>
 
     <!-- LIFELINE CTAs -->
-    <section class="py-16 bg-white border-t border-drq-grey-light/30">
+    <section class="py-16 bg-white border-t border-drq-slate/30">
         <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
 
             <!-- Sanity Check -->
             <div
-                class="bg-drq-bg p-8 rounded-xl border border-drq-grey-light/30 hover:shadow-md transition flex flex-col md:flex-row gap-6 items-center md:items-start text-center md:text-left">
+                class="bg-drq-bg p-8 rounded-xl border border-drq-slate/30 hover:shadow-md transition flex flex-col md:flex-row gap-6 items-center md:items-start text-center md:text-left">
                 <div
-                    class="w-16 h-16 bg-white rounded-full flex items-center justify-center shrink-0 border border-drq-grey-light/50">
+                    class="w-16 h-16 bg-white rounded-full flex items-center justify-center shrink-0 border border-drq-slate/50">
                     <span class="text-2xl">🤔</span>
                 </div>
                 <div>
-                    <h4 class="font-bold text-drq-grey text-lg">Not sure if this fits?</h4>
-                    <p class="text-drq-grey/70 text-sm mb-4">Talk to Dr. Q directly. A 15-minute "Sanity Check" to see
+                    <h4 class="font-bold text-drq-navy text-lg">Not sure if this fits?</h4>
+                    <p class="text-drq-navy/70 text-sm mb-4">Talk to Dr. Q directly. A 15-minute "Sanity Check" to see
                         if this solves your specific chaos.</p>
                     <a href="#"
-                        class="text-drq-green font-bold text-sm border-b-2 border-drq-green hover:text-green-700 transition pb-1">Schedule
+                        class="text-drq-gold font-bold text-sm border-b-2 border-drq-gold hover:text-amber-700 transition pb-1">Schedule
                         15-Min Q&A &rarr;</a>
                 </div>
             </div>
 
             <!-- Principal Kit -->
             <div
-                class="bg-drq-bg p-8 rounded-xl border border-drq-grey-light/30 hover:shadow-md transition flex flex-col md:flex-row gap-6 items-center md:items-start text-center md:text-left">
+                class="bg-drq-bg p-8 rounded-xl border border-drq-slate/30 hover:shadow-md transition flex flex-col md:flex-row gap-6 items-center md:items-start text-center md:text-left">
                 <div
-                    class="w-16 h-16 bg-white rounded-full flex items-center justify-center shrink-0 border border-drq-grey-light/50">
+                    class="w-16 h-16 bg-white rounded-full flex items-center justify-center shrink-0 border border-drq-slate/50">
                     <span class="text-2xl">💼</span>
                 </div>
                 <div>
-                    <h4 class="font-bold text-drq-grey text-lg">Need Approval?</h4>
-                    <p class="text-drq-grey/70 text-sm mb-4">Download the "Convince Your Principal" Toolkit. Includes
+                    <h4 class="font-bold text-drq-navy text-lg">Need Approval?</h4>
+                    <p class="text-drq-navy/70 text-sm mb-4">Download the "Convince Your Principal" Toolkit. Includes
                         approval letter, W-9, and funding codes.</p>
                     <a href="letter.html" target="_blank"
-                        class="text-drq-red font-bold text-sm border-b-2 border-drq-red hover:text-red-800 transition pb-1">Download
+                        class="text-drq-blue font-bold text-sm border-b-2 border-drq-blue hover:text-blue-800 transition pb-1">Download
                         Toolkit &rarr;</a>
                 </div>
             </div>
@@ -472,24 +518,24 @@
     </section>
 
     <!-- REVENUE & FUNDING TIPS -->
-    <section class="py-12 bg-drq-grey text-center">
+    <section class="py-12 bg-drq-navy text-center">
         <div class="max-w-4xl mx-auto px-6">
             <h3 class="font-serif font-bold text-2xl text-white mb-6">How to Find the Money</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
-                <div class="bg-drq-grey/50 border border-white/20 p-4 rounded shadow-sm">
+                <div class="bg-drq-navy/50 border border-white/20 p-4 rounded shadow-sm">
                     <div class="font-bold text-white text-sm mb-1">Title II</div>
                     <p class="text-xs text-slate-300">Teacher Quality & PD Funds</p>
                 </div>
                 <!-- ... other items ... -->
-                <div class="bg-drq-grey/50 border border-white/20 p-4 rounded shadow-sm">
+                <div class="bg-drq-navy/50 border border-white/20 p-4 rounded shadow-sm">
                     <div class="font-bold text-white text-sm mb-1">Title I / Comp Ed</div>
                     <p class="text-xs text-slate-300">Behavior & at-risk support</p>
                 </div>
-                <div class="bg-drq-grey/50 border border-white/20 p-4 rounded shadow-sm">
+                <div class="bg-drq-navy/50 border border-white/20 p-4 rounded shadow-sm">
                     <div class="font-bold text-white text-sm mb-1">IDEA Part B</div>
                     <p class="text-xs text-slate-300">For behavioral disabilities</p>
                 </div>
-                <div class="bg-drq-grey/50 border border-white/20 p-4 rounded shadow-sm">
+                <div class="bg-drq-navy/50 border border-white/20 p-4 rounded shadow-sm">
                     <div class="font-bold text-white text-sm mb-1">Campus Activity</div>
                     <p class="text-xs text-slate-300">Principal's choice funds</p>
                 </div>
@@ -501,10 +547,10 @@
     <section id="reviews" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-12">
-                <h2 class="font-serif font-bold text-3xl text-drq-grey">What Real Teachers Say</h2>
+                <h2 class="font-serif font-bold text-3xl text-drq-navy">What Real Teachers Say</h2>
                 <div class="flex items-center gap-2">
-                    <div class="flex text-drq-green-light">★★★★★</div>
-                    <span class="text-drq-grey-light font-medium">4.9/5 Average Rating</span>
+                    <div class="flex text-drq-gold-light">★★★★★</div>
+                    <span class="text-drq-slate font-medium">4.9/5 Average Rating</span>
                 </div>
             </div>
 
@@ -512,51 +558,51 @@
             <div class="flex overflow-x-auto gap-6 pb-8 snap-x">
                 <!-- Review 1 -->
                 <div
-                    class="min-w-[300px] md:min-w-[350px] bg-drq-bg p-6 rounded-xl border border-drq-grey-light/30 snap-center">
-                    <div class="flex items-center gap-1 text-drq-green-light text-sm mb-3">★★★★★</div>
-                    <p class="text-drq-grey/80 italic mb-4">"I thought I knew classroom management. Now, I know I know
+                    class="min-w-[300px] md:min-w-[350px] bg-drq-bg p-6 rounded-xl border border-drq-slate/30 snap-center">
+                    <div class="flex items-center gap-1 text-drq-gold-light text-sm mb-3">★★★★★</div>
+                    <p class="text-drq-navy/80 italic mb-4">"I thought I knew classroom management. Now, I know I know
                         classroom management. Dr. Q changed my career."</p>
                     <div class="flex items-center gap-3">
                         <div
-                            class="w-10 h-10 bg-drq-grey rounded-full flex items-center justify-center font-bold text-white text-xs">
+                            class="w-10 h-10 bg-drq-navy rounded-full flex items-center justify-center font-bold text-white text-xs">
                             SD</div>
                         <div>
-                            <div class="font-bold text-drq-grey text-sm">Samantha D.</div>
-                            <div class="text-xs text-drq-grey/60">4th Grade Teacher</div>
+                            <div class="font-bold text-drq-navy text-sm">Samantha D.</div>
+                            <div class="text-xs text-drq-navy/60">4th Grade Teacher</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 2 -->
                 <div
-                    class="min-w-[300px] md:min-w-[350px] bg-drq-bg p-6 rounded-xl border border-drq-grey-light/30 snap-center">
-                    <div class="flex items-center gap-1 text-drq-green-light text-sm mb-3">★★★★★</div>
-                    <p class="text-drq-grey/80 italic mb-4">"No more yelling. Just teaching. Dr. Q is the real deal."
+                    class="min-w-[300px] md:min-w-[350px] bg-drq-bg p-6 rounded-xl border border-drq-slate/30 snap-center">
+                    <div class="flex items-center gap-1 text-drq-gold-light text-sm mb-3">★★★★★</div>
+                    <p class="text-drq-navy/80 italic mb-4">"No more yelling. Just teaching. Dr. Q is the real deal."
                     </p>
                     <div class="flex items-center gap-3">
                         <div
-                            class="w-10 h-10 bg-drq-grey rounded-full flex items-center justify-center font-bold text-white text-xs">
+                            class="w-10 h-10 bg-drq-navy rounded-full flex items-center justify-center font-bold text-white text-xs">
                             HM</div>
                         <div>
-                            <div class="font-bold text-drq-grey text-sm">Hayden M.</div>
-                            <div class="text-xs text-drq-grey/60">2nd Grade Teacher</div>
+                            <div class="font-bold text-drq-navy text-sm">Hayden M.</div>
+                            <div class="text-xs text-drq-navy/60">2nd Grade Teacher</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 3 -->
                 <div
-                    class="min-w-[300px] md:min-w-[350px] bg-drq-bg p-6 rounded-xl border border-drq-grey-light/30 snap-center">
-                    <div class="flex items-center gap-1 text-drq-green-light text-sm mb-3">★★★★★</div>
-                    <p class="text-drq-grey/80 italic mb-4">"You could hear a pin drop. I don’t know how to explain the
+                    class="min-w-[300px] md:min-w-[350px] bg-drq-bg p-6 rounded-xl border border-drq-slate/30 snap-center">
+                    <div class="flex items-center gap-1 text-drq-gold-light text-sm mb-3">★★★★★</div>
+                    <p class="text-drq-navy/80 italic mb-4">"You could hear a pin drop. I don’t know how to explain the
                         relief I felt."</p>
                     <div class="flex items-center gap-3">
                         <div
-                            class="w-10 h-10 bg-drq-grey rounded-full flex items-center justify-center font-bold text-white text-xs">
+                            class="w-10 h-10 bg-drq-navy rounded-full flex items-center justify-center font-bold text-white text-xs">
                             MD</div>
                         <div>
-                            <div class="font-bold text-drq-grey text-sm">Michael D.</div>
-                            <div class="text-xs text-drq-grey/60">English IV</div>
+                            <div class="font-bold text-drq-navy text-sm">Michael D.</div>
+                            <div class="text-xs text-drq-navy/60">English IV</div>
                         </div>
                     </div>
                 </div>
@@ -565,7 +611,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-drq-grey text-white/60 py-12 border-t border-white/10">
+    <footer class="bg-drq-navy text-white/60 py-12 border-t border-white/10">
         <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-8 mb-8">
             <div class="col-span-1 md:col-span-2">
                 <h4 class="text-white font-serif font-bold text-xl mb-4">Dr. Q Consulting</h4>
@@ -576,7 +622,7 @@
                 <h5 class="text-white font-bold mb-4">Contact</h5>
                 <ul class="text-sm space-y-2">
                     <li><a href="mailto:drq@drqconsulting.org"
-                            class="hover:text-drq-green transition">drq@drqconsulting.org</a></li>
+                            class="hover:text-drq-gold transition">drq@drqconsulting.org</a></li>
                     <li>903-987-9960</li>
                 </ul>
             </div>
@@ -599,30 +645,30 @@
 
             // Buttons visual state
             document.querySelectorAll('button[id^="btn-"]').forEach(btn => {
-                btn.classList.remove('bg-drq-green', 'text-white', 'scale-110', 'shadow-lg');
+                btn.classList.remove('bg-drq-gold', 'text-white', 'scale-110', 'shadow-lg');
                 btn.classList.add('bg-white/10', 'text-white', 'hover:bg-white/20');
             });
 
             const activeBtn = document.getElementById(`btn-${size}`);
             activeBtn.classList.remove('bg-white/10', 'text-white', 'hover:bg-white/20');
-            activeBtn.classList.add('bg-drq-green', 'text-white', 'scale-110', 'shadow-lg');
+            activeBtn.classList.add('bg-drq-gold', 'text-white', 'scale-110', 'shadow-lg');
 
             // Logic
             if (size === 2) {
                 priceDisplay.innerText = "$898";
                 personCount.innerText = "2";
                 dealText.innerText = "STANDARD SAVINGS";
-                dealText.className = "text-xs text-drq-grey-light uppercase font-bold tracking-wider mb-1";
+                dealText.className = "text-xs text-drq-slate uppercase font-bold tracking-wider mb-1";
             } else if (size === 3) {
                 priceDisplay.innerText = "$899";
                 personCount.innerText = "3";
                 dealText.innerText = "🔥 3RD PERSON FOR $1!";
-                dealText.className = "text-xs text-drq-green-light uppercase font-bold tracking-wider mb-1 animate-pulse";
+                dealText.className = "text-xs text-drq-gold-light uppercase font-bold tracking-wider mb-1 animate-pulse";
             } else if (size === 5) {
                 priceDisplay.innerText = "$1,399";
                 personCount.innerText = "5";
                 dealText.innerText = "GROUP RATE APPLIED";
-                dealText.className = "text-xs text-drq-grey-light uppercase font-bold tracking-wider mb-1";
+                dealText.className = "text-xs text-drq-slate uppercase font-bold tracking-wider mb-1";
             }
         }
     </script>
