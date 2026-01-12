@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request for Approval - Win the Classroom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F1F5F9;
+            color: #0F172A;
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .document-container {
+            background: white;
+            padding: 4rem;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .actions {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            background-color: #2563EB;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #1E40AF;
+        }
+
+        .btn.secondary {
+            background-color: white;
+            color: #475569;
+            border: 1px solid #CBD5E1;
+        }
+
+        .btn.secondary:hover {
+            background-color: #F8FAFC;
+        }
+
+        .content {
+            margin-top: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+        }
+
+        ul {
+            margin-bottom: 1.2rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .costs {
+            background: #F8FAFC;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border: 1px solid #E2E8F0;
+        }
+
+        .costs h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .cost-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px dashed #CBD5E1;
+        }
+
+        .cost-row:last-child {
+            border-bottom: none;
+            font-weight: 700;
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: 2px solid #CBD5E1;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .document-container {
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .actions {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="document-container">
+        <div class="actions">
+            <button onclick="copyToClipboard()" class="btn secondary">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                </svg>
+                Copy Text
+            </button>
+            <button onclick="window.print()" class="btn">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Print / Save as PDF
+            </button>
+        </div>
+
+        <div class="content" id="letter-text">
+            <p>[DATE]</p>
+            <p>Dear [Principal’s Name],</p>
+
+            <p>I’d like to request your approval to attend <strong>Win the Classroom</strong>, a high-impact, 2-day
+                professional development workshop led by Dr. Quentin “Dr. Q” Woods. The focus is on strengthening
+                classroom management, refining instructional delivery, and re-energizing teachers through practical,
+                hands-on strategies.</p>
+
+            <p>This workshop is different from typical PD sessions—it blends real-world modeling, practice, and
+                problem-solving for issues we face every day, such as behavior management, student engagement, and
+                instructional clarity. Teachers leave with clear action steps, increased confidence, and tools they can
+                implement immediately upon return to the classroom.</p>
+
+            <p>Highlights include:</p>
+            <ul>
+                <li>Strategies for managing disruptive behavior</li>
+                <li>How to reset classroom expectations mid-year</li>
+                <li>Routines that increase student accountability</li>
+                <li>Approaches that protect instructional time and reduce burnout</li>
+            </ul>
+
+            <p>I believe this investment will directly impact my classroom and contribute to a stronger learning
+                environment campus-wide. I'm committed to bringing back what I learn and sharing key takeaways with our
+                team.</p>
+
+            <div class="costs">
+                <h3>Estimated Costs</h3>
+                <div class="cost-row">
+                    <span>Registration:</span>
+                    <span>[INSERT COST]</span>
+                </div>
+                <div class="cost-row">
+                    <span>Travel:</span>
+                    <span>[INSERT COST]</span>
+                </div>
+                <div class="cost-row">
+                    <span>Meals/Other:</span>
+                    <span>[INSERT COST]</span>
+                </div>
+                <div class="cost-row">
+                    <span>Total:</span>
+                    <span>[INSERT TOTAL]</span>
+                </div>
+            </div>
+
+            <p>Thank you for considering this opportunity to help me start winning the classroom!</p>
+
+            <p>Sincerely,</p>
+            <p>[Your Name]</p>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            const range = document.createRange();
+            range.selectNode(document.getElementById("letter-text"));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+            alert("Letter copied to clipboard! Paste it into your email.");
+        }
+    </script>
+</body>
+
+</html>
